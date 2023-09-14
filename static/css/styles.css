@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "ted";
-  src: url(Caprasimo-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Caprasimo&display=swap');
 
 body,
 html {
@@ -23,7 +20,7 @@ html {
 }
 
 .text {
-  font-family: ted;
+  font-family: Caprasimo;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -40,7 +37,7 @@ html {
 }
 
 .info {
-  font-family: ted;
+  font-family: Caprasimo;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -171,7 +168,7 @@ header {
   color: rgb(247, 247, 72);
   mix-blend-mode: difference;
   margin-left: 1rem;
-  font-family: ted;
+  font-family: Caprasimo;
 }
 
 .buttons {
