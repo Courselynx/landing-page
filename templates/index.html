@@ -7,6 +7,9 @@
     <title>courselynx</title>
     <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 </head>
 
@@ -14,12 +17,12 @@
     <header>
         <div class="logo"><b>courselynx</b></div>
         <div class="buttons">
-            <button class="btn">Survey 1</button>
-            <button class="btn">Survey 2</button>
+            <button class="btn"><link href="https://forms.gle/Xkda87Wbym4F8Me56">Survey 1</link></button>
+            <button class="btn" href="https://forms.gle/7mwHoVibo4sYYjqX7">Survey 2</button>
         </div>
     </header>
     <div class="container">
-        <div class="text" data-text="course">course<span class="lynx" data-text="lynx">lynx</span></div>
+        <div class="text animate__animated animate__backInDown" >courselynx</div>
         <div class="info">
             <!-- <div class="title"><h2>Coming soon!</h2></div> -->
             <!-- <img src="thread-graphic.png" alt="threaded discussion"> -->
@@ -27,32 +30,69 @@
                 <div class="slides">
                     <div class="slide">
                         <div class="big-box">
-                            <div class="box l t1">
-                                <!-- <h2>Slide 1</h2> -->
-                                <p>search 🔎</p>
+                            <div class="box l t1 animate__flipInX">
+                                <span class="close-btn">X</span>
+                                <div class="box-front">
+                                    <p>search 🔎</p>
+                                </div>
+                                <div class="box-back">
+                                    <p class="content"> CourseLynx will enable users to find exactly what they need when they need it. Discussion boards can be searched by key words and phrases, or filtered by the type of post.</p>
+                                    </p>
+                                </div>
                             </div>
                             <div class="box t2">
-                                <p>up/down votes ⬆️⬇️</p>
+                                <span class="close-btn">X</span>
+                                <div class="box-front">
+                                    <p>up/down votes ⬆️⬇️</p>
+                                </div>
+                                <div class="box-back">
+                                    <p class="content">With the integration of up/down votes, it will never be easier to find relevant information and weed out nonsense.</p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="big-box">
                             <div class="box l t3">
-                                <!-- <h2>Slide 1</h2> -->
-
-                                <p>no bots ❌🤖</p>
+                                <span class="close-btn">X</span>
+                                <div class="box-front">
+                                    <p>no bots ❌🤖</p>
+                                </div>
+                                <div class="box-back">
+                                    <p>No more bots! CourseLynx will ensure that bots are moderated and do not disturb the conversations with Taylor Swift concert tickets.
+                                    </p>
+                                </div>
                             </div>
                             <div class="box t4">
-                                <p>easily join classes 🔥</p>
+                                <span class="close-btn">X</span>
+                                <div class="box-front">
+                                    <p>easily join classes 🔥</p>
+                                </div>
+                                <div class="box-back">
+                                    <p>Just enter your classes and your professors, we will take care of the rest. No more reddit posts or mass emails trying to find the groupchat.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="big-box">
+                        <div class="big-box bottom">
                             <div class="box l t5">
-                                <p>discussion boards 📚</p>
+                                <span class="close-btn">X</span>
+                                <div class="box-front">
+                                    <p>discussion boards 📚</p>
+                                </div>
+                                <div class="box-back">
+                                    <p>Questions, general information, concerns will all be neatly organized on class discussion boards.</p>
+                                    </div>
                             </div>
                             <div class="box t6">
-                                <p>chat 💬</p>
+                                <span class="close-btn">X</span>
+                                <div class="box-front">
+                                    <p>chat 💬</p>
+                                </div>
+                                <div class="box-back">
+                                    <p>The groupchat, the backbone of every class will be readily available whenever you need it.</p>
+                                </div>
                             </div>
                         </div>
+                        <p class="clickfurmore">Click box for more!</p>
                     </div>
                     <div class="slide">
                         <div class="image-slide">
@@ -104,28 +144,36 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="box threaded">
+                            <div class="threaded">
                                 <p class="slide-text">threaded messages</p>
                             </div>
                         </div>
                     </div>
                     <div class="slide">
-                        <div class="pics-of-us">
-                            <div class="box three"><i class="fas fa-user us"></i></div>
-                            <div class="box three"><i class="fas fa-user us"></i></div>
-                            <div class="box three"><i class="fas fa-user us"></i></div>
-                        </div>
-                        <div class="box three">
-                            <p>CourseLynx was founded by three Gators who know from experience how difficult it can be
+                        <h2>About us</h2>
+                        <!-- <div class="pics-of-us">
+                            <div class="three"><i class="fas fa-user us"></i></div>
+                            <div class="three"><i class="fas fa-user us"></i></div>
+                            <div class="three"><i class="fas fa-user us"></i></div>
+                        </div> -->
+                        <div class="three">
+                            <p class="found-info">CourseLynx was founded by three Gators who know from experience how difficult it can be
                                 to not only communicate with your classmates, but communicate with them effectively. Our
                                 mission is to virtually connect students in a way that drives collaboration and enhances
                                 the digital side of the college experience.
                             </p>
                         </div>
                     </div>
-                    <div class="slide">
-                        <p>ted is cool</p>
+                    <div class="slide email-slide">
+                        <h2>Stay Updated!</h2>
+                        <p>Join our email list to get the latest news and updates.</p>
+                        <div class="email-input-container">
+                            <input type="email" id="emailInput" placeholder="Enter your email">
+                            <button class="btn email-btn">Subscribe</button>
+                        </div>
+                        <p class="email-feedback"></p>
                     </div>
+                    
                     <!-- Add more slides as needed -->
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Caprasimo&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Caprasimo&display=swap");
 
 body,
 html {
@@ -22,18 +22,16 @@ html {
 .text {
   font-family: Caprasimo;
   position: fixed;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -70%);
   font-size: 4rem;
-  color: rgb(247, 247, 72);
+  color: orange;
   z-index: 2;
-  opacity: 0;
   letter-spacing: -0.1rem;
   font-size: 8rem;
-  mix-blend-mode: difference;
-  animation: fadeIn 3.5s ease-out forwards 0.5s;
-  /* text-shadow: 1px 5px 1px rgb(0,0,0,0.4); */
+  display: flex;
+  justify-content: center;
+  top: 45%;
+  width: 100%;
 }
 
 .info {
@@ -43,20 +41,13 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
-  color: rgb(8, 8, 183);
+  color: orange;
   opacity: 0; /* Initially hidden */
   /* transition: opacity 0.5s; Fade effect */
   z-index: 2;
   text-align: center;
   mix-blend-mode: difference;
   font-size: 2em;
-  width: 100%;
-}
-
-.container .info img {
-  mix-blend-mode: normal;
-  z-index: 99999;
-  opacity: 0;
   width: 100%;
 }
 
@@ -124,9 +115,9 @@ html {
     font-size: 0.9rem;
     width: 80%;
   }
-.message {
-  margin-left: 7vw;
-}
+  .message {
+    margin-left: 7vw;
+  }
 
   .image-slide {
     flex-direction: column;
@@ -135,14 +126,25 @@ html {
   .slide-text {
     margin-top: 0;
   }
+
+  .box {
+    padding: 20px;
+  }
+
+  .info {
+    font-size: 1.5rem;
+  }
+  /* Styles for mobile screens */
+  .box.flipped {
+    width: 100%;
+  }
 }
 
-.image-slide{
+.image-slide {
   display: flex;
   gap: 1rem;
   width: 80%;
 }
-
 
 /* Existing styles... */
 
@@ -160,20 +162,19 @@ header {
   right: 0;
   z-index: 10; /* Ensure the header is above other content */
   height: 10%;
-  mix-blend-mode: difference;
 }
 
 .logo {
   font-size: 1.5rem;
-  color: rgb(247, 247, 72);
-  mix-blend-mode: difference;
+  color: orange;
+  /* mix-blend-mode: difference; */
   margin-left: 1rem;
   font-family: Caprasimo;
 }
 
 .buttons {
   display: flex;
-  gap: 1rem; 
+  gap: 1rem;
   margin-right: 1rem;
 }
 
@@ -182,22 +183,20 @@ header {
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  color: yellow;
-  mix-blend-mode: difference;
-
-  /* Remove default button styles */
-  /* padding: 0;
-  margin: 0; */
+  color: orange;
   outline: none;
-  border-radius: 100px;
+  border-radius: 10%;
+  box-shadow: 5px 5px;
   font-size: 16px;
   padding: 0.5em 1em;
-  border: 2px solid yellow;
+  border: 2px solid orange;
 }
 
 .btn:hover {
-  color: orange;
-  border: 2px solid orange;
+  background: orange;
+  color: rgb(8, 8, 183);
+  border: 2px solid rgb(8, 8, 183);
+  box-shadow: 5px 5px rgb(8, 8, 183);
 }
 
 .arrow {
@@ -206,8 +205,8 @@ header {
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
-  color: rgb(247, 247, 72);
-  mix-blend-mode: difference;
+  color: orange;
+  /* mix-blend-mode: difference; */
   animation: bounce 2.1s infinite 1s;
   z-index: 99;
   opacity: 1;
@@ -235,13 +234,13 @@ footer {
   left: 0;
   right: 0;
   height: 10%;
-  background: black;
-  color: white;
+  background: transparent;
+  color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 .footer-links {
@@ -267,7 +266,7 @@ footer {
 
 .footer-links a,
 .footer-social a {
-  color: white; /* Set the link color to white */
+  /* color: orange;  */
   text-decoration: none; /* Remove the underline */
   transition: color 0.3s; /* Smooth color transition on hover */
 }
@@ -277,12 +276,19 @@ footer {
   color: gray; /* Change color on hover */
 }
 
-.desription {
-  width: 60%;
-}
-
 /* SLIDER */
 /* ------------------------------ */
+
+.clickfurmore {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: gray;
+  font-size: 1rem;
+}
+
+.bottom {
+  margin-bottom: 4vh;
+}
 
 .arrow-btn {
   background: none;
@@ -349,25 +355,115 @@ footer {
 
 .box {
   background: rgb(208, 208, 213);
-  padding: 50px;
+  padding: 20px;
   border: 3px solid rgb(8, 8, 183);
   border-radius: 10px;
   box-shadow: 10px 10px;
   margin-top: 15px;
   opacity: 0;
+  perspective: 1000px; /* This gives a 3D feel to the flipping effect */
+  position: relative;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform-style: preserve-3d;
+  transition: transform 0.6s; */
 }
-.box:hover {
-  background: rgb(8, 8, 183);
+
+div.big-box:nth-child(2) {
+  margin-left: 5vw;
+}
+
+
+.found-info {
+  width: 70%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  margin-top: 1vh;
+}
+
+.box-front,
+.box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.box p {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* padding: 20px;
+  padding-bottom: 30px; */
+}
+
+.box-front {
+  z-index: 2; /* Front side should be on top initially */
+}
+
+.box-back {
+  transform: rotateY(180deg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3px;
+  /* font-weight: bold; */
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  /* Rotate the back side */
+}
+
+.box.flipped .box-front {
+  transform: rotateY(180deg);
+}
+
+.box.flipped .box-back {
+  transform: rotateY(0deg);
+}
+
+.box.flipped {
+  background: rgba(1, 1, 183, 1);
   color: rgb(225, 152, 15);
   border: 3px solid rgb(208, 208, 213);
   box-shadow: 10px 10px;
 }
 
+/* .box:hover {
+  background: rgb(8, 8, 183);
+  color: rgb(225, 152, 15);
+  border: 3px solid rgb(208, 208, 213);
+  box-shadow: 10px 10px;
+} */
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
 .big-box {
   display: flex;
   justify-content: center;
+  width: 70%;
+  height: 20%;
 }
 
+.close-btn {
+  opacity: 0;
+}
 
 .box.l {
   margin-right: 17px;
@@ -389,21 +485,10 @@ footer {
   margin-left: 0;
 }
 
-.box.three {
-  opacity: 1;
-  width: 50%;
-  margin-left: 15x;
-  box-shadow: 15px 15px rgb(8, 8, 183); 
-  color: black;
-  margin-bottom: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-div.three:nth-child(1), div.three:nth-child(2){
-  margin-right: 3vw;
-}
-
-div.three:nth-child(3) {
-  margin-left: 3vw;
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pics-of-us {
@@ -414,16 +499,6 @@ div.box:nth-child(3) > i:nth-child(1) {
   position: relative;
   right: 15px;
   color: rgb(8, 8, 183);
-}
-
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
 }
 
 @keyframes slideLeft {
@@ -460,14 +535,14 @@ div.box:nth-child(3) > i:nth-child(1) {
   }
 }
 
-
 .message {
   display: flex-column;
   border-radius: 5px;
   opacity: 1; /* Initially hidden */
   transform: translateY(-20px); /* Initially moved up a bit */
   transition: opacity 0.5s, transform 0.5s;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: transparent;
   font-size: 0.5em;
   color: black;
@@ -491,7 +566,6 @@ div.box:nth-child(3) > i:nth-child(1) {
   text-align: left;
 }
 
-
 .message.child {
   margin-top: 30px;
   margin-left: 30px; /* Indent for child messages */
@@ -501,7 +575,7 @@ div.box:nth-child(3) > i:nth-child(1) {
   /* margin-right: 5px;  */
   /* width: 3vh;
   height: 3vh; */
-  scale: 2.0;
+  scale: 2;
   width: 10px;
   height: 10px;
   margin-left: 5px;
@@ -518,31 +592,146 @@ div.box:nth-child(3) > i:nth-child(1) {
 }
 
 .user-info {
-text-align: left;
-margin-bottom: 10px;
-margin-top: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .m4 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.m1, .m2, .m3, .m4 {
+.m1,
+.m2,
+.m3,
+.m4 {
   display: flex-column;
   opacity: 0;
-  }
-
-
+}
 
 @keyframes fadeInDown {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Apply the animation to each message */
+
+/* flip card */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+/* Email slide  */
+
+.email-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.email-slide h2 {
+  color: rgb(8, 8, 183);
+  font-family: Caprasimo;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.email-slide p {
+  color: rgb(8, 8, 183);
+  font-family: Caprasimo;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.email-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.email-input-container input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid rgb(8, 8, 183);
+  border-radius: 5px;
+  outline: none;
+}
+
+.email-btn {
+  background: none;
+  border: 2px solid yellow;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: yellow;
+  mix-blend-mode: difference;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.email-btn:hover {
+  background: orange;
+  color: rgb(1, 1, 183);
+}
+
+.email-feedback {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: orange;
+}
