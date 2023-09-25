@@ -32,14 +32,24 @@ document.addEventListener('DOMContentLoaded', function() {
     typeEffect();
 });
 
+document.querySelector('.email-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
 
-// const header = document.querySelector("header")
+  let email = document.querySelector('.email-input').value;
 
-// document.addEventListener('scroll', () => {
-//     if (window.scrollY > window.innerHeight * 0.9) {
-//         header.style.backgroundColor = "rgb(240,240,240)"
-//     }
-//     else {
-//         header.style.backgroundColor = "transparent"
-//     }
-// }); 
+  fetch('/save-email', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email: email })
+  })
+  .then(response => response.json())
+  .then(data => {
+      if(data.success) {
+          alert('Email saved successfully!');
+      } else {
+          alert('There was an error saving the email.');
+      }
+  });
+});
