@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Caprasimo&display=swap");
 
-
 body {
   margin: 0; /* background: rgb(234,232,224);  */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -229,7 +228,7 @@ html {
 }
 
 /* Mobile styles */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   /* Adjust the breakpoint as needed */
 
   html {
@@ -273,12 +272,13 @@ html {
     justify-content: start;
   }
 
-  .flex-container.two h1, .flex-container.two p {
+  .flex-container.two h1,
+  .flex-container.two p {
     font-size: 2rem;
     width: 80vw;
   }
 
-  .flex-container.two h1{
+  .flex-container.two h1 {
     margin-top: 15rem;
   }
 
@@ -350,33 +350,33 @@ html {
     justify-content: start;
   }
 
-  .flex-container.two h1, .flex-container.two p {
+  .flex-container.two h1,
+  .flex-container.two p {
     font-size: 2rem;
     width: 80vw;
   }
 
-  .flex-container.two h1{
+  .flex-container.two h1 {
     margin-top: 15rem;
   }
 }
 
 @media (max-width: 450px) {
-    .main-flex-container {
+  .main-flex-container {
     height: 110vh;
-    }
-    .logo {
-      letter-spacing: 0;
-      margin-left: 1rem;
-      margin-right: 2rem;
-    }
-    .buttons {
-      height: 80%;
-      gap: 0rem;
-      margin-right: 0;
-    }
-    .text {
-      font-size: 5rem;
-      margin-left: 0;
-    }
-
+  }
+  .logo {
+    letter-spacing: 0;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+  .buttons {
+    height: 80%;
+    gap: 0rem;
+    margin-right: 0;
+  }
+  .text {
+    font-size: 5rem;
+    margin-left: 0;
+  }
 }
