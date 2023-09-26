@@ -333,7 +333,7 @@ html {
 
   .phone {
     position: relative;
-    width: 80%;
+    width: 600px;
     rotate: -15deg;
     z-index: 1;
     overflow: hidden;
