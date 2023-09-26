@@ -260,7 +260,6 @@ html {
     z-index: 1;
     /* overflow: hidden; */
     margin-left: 10rem;
-    margin-top: 2em;
     margin-bottom: 1rem;
   }
   .phone:nth-child(2) {
