@@ -255,11 +255,12 @@ html {
 
   .phone {
     position: relative;
-    width: 70%;
+    width: 65%;
     rotate: -15deg;
     z-index: 1;
     /* overflow: hidden; */
     margin-left: 10rem;
+    margin-top: 2em;
   }
   .phone:nth-child(2) {
     display: none; /* Remove margin for the second phone */
