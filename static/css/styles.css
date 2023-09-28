@@ -360,6 +360,12 @@ html {
   .flex-container.two h1 {
     margin-top: 15rem;
   }
+
+  .browser {
+    width: 700px;
+    overflow: hidden;
+    margin-right: 90%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -382,5 +388,11 @@ html {
   }
   .phone {
     width: 80%;
+  }
+
+  .browser {
+    width: 700px;
+    overflow: hidden;
+    margin-right: 90%;
   }
 }
