@@ -17,10 +17,10 @@
     <header>
         <div class="logo"><b>course<span class="lynx">lynx</span></b></div>
         <div class="buttons">
-            <form action="https://forms.gle/DpYX72az6pb1xcv48">
+            <form class="bc" action="https://forms.gle/DpYX72az6pb1xcv48">
                 <button class="btn" type="submit">Survey 1</button>
              </form>
-             <form action="https://forms.gle/8kXPSNtg1EjJQzPA6">
+             <form class="bc" action="https://forms.gle/8kXPSNtg1EjJQzPA6">
                 <button class="btn" type="submit">Survey 2</button>
              </form>
         </div>
@@ -42,10 +42,20 @@
         </div>
     </section>
     
-        <section class="flex-container two">
-            <h1>Our mission is to virtually connect students in a way that drives collaboration and enhances the digital side of the college experience.</h4>
-            <img src="{{ url_for('static', filename='images/mac-frame.png') }}" alt="UI" class="browser">
+        <div class="container">
+            <div class="caption">
+                <p class="pop-up">Advanced filter/search</p>
+                <p class="pop-up">Discussion boards for each course</p>
+            </div>
+            <section class="flex-container two">
+                <h1>Our mission is to virtually connect students in a way that drives collaboration and enhances the digital side of the college experience.</h4>
+                <img src="{{ url_for('static', filename='images/mac-frame.png') }}" alt="UI" class="browser">
             </section>
+            <div class="caption">
+                <p class="pop-up">Easy to find groupchats</p>
+                <p class="pop-up">Earn awards and cred for your acheivments</p>
+            </div>
+        </div>
         <footer class="footer">
             <div class="footer-left">
                 <a href="#" class="footer-link">courselynx</a>

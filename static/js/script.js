@@ -53,3 +53,26 @@ document.querySelector('.email-form').addEventListener('submit', function(event)
       }
   });
 });
+
+
+window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY;
+    console.log(scrollPosition)
+    console.log(this.window.innerHeight)
+
+    if (scrollPosition > this.window.innerHeight/3) {
+        console.log('show popups');
+        console.log(scrollPosition)
+        let popups = this.document.querySelectorAll('.pop-up');
+        let delay = 500;
+
+        popups.forEach((popup, index) => {
+            setTimeout(() => {
+                popup.classList.add('animate__animated', 'animate__fadeInUp');
+            }, delay);
+
+            delay += 500;
+        })
+    }
+    this.window.removeEventListener('scroll', this)
+});
