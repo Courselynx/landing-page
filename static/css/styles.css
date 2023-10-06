@@ -1,444 +1,203 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0; /* background: rgb(234,232,224);  */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Heebo", sans-serif;
+  background-color: white;
+  font-size: 16px; /* 1rem */
 }
 
-header {
+nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10; /* Ensure the header is above other content */
-  /* box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2); */
-  /* background-color: white; */
-  height: 7rem;
-  background-color: rgb(241, 241, 241);
-  box-shadow: 2px 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-html {
-  font-size: 62.5%;
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-  /* 10px/16px = 62.5% -> 1rem = 10px */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 2rem;
+  align-self: center;
+  margin: 0 2rem 0 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sign-up > a:nth-child(1) {
+  color: white;
 }
 
 .logo {
-  font-size: 3.5rem;
-  color: rgb(0, 0, 204, 0.787);
-  /* mix-blend-mode: difference; */
-  margin-left: 2.5rem;
-  font-family: Manrope;
-  /* letter-spacing: 0.5px; */
+  width: 100px;
+  height: 100px;
+  margin: 0 0 0 1rem;
 }
 
-.buttons {
-  display: flex;
-  gap: 3rem;
-  margin-right: 1rem;
-  align-items: center;
-  height: 100%;
+.survey {
+  padding: 0.5rem 1rem;
 }
 
-.btn {
-  background-color: rgb(241, 241, 241);
-  width: 100%;
-  height: 100%;
-  border: none;
-  font-family: Manrope;
-  font-size: 3rem;
-  cursor: pointer;
-  /* font-size: 16px; */
-  color: rgb(0, 0, 204, 0.787);
-  margin-right: 1.5rem;
-  font-weight: 800;
-  /* border: 2px solid rgb(0, 0, 204, 0.787); */
-}
-
-.bc {
-  height: 100%;
-}
-
-.btn:hover {
-  border-bottom: 3px solid rgb(0, 0, 204, 0.787);
-}
-
-.text {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: rgba(0, 0, 204, 0.787);
-  font-size: 10rem;
-  margin-left: 0;
-  letter-spacing: 0.5px;
-  font-weight: bold;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-around; /* This will space out the main items (text and image group) */
-  align-items: center;
-  height: 150%;
-}
-
-.image-group {
-  display: flex;
-  justify-content: center;
-}
-
-.phone {
-  width: 18vw;
-  height: auto; /* This ensures the image maintains its original aspect ratio */
-  transform: rotate(15deg);
-  margin: 0 3rem;
-  flex-grow: 2;
+.survey:hover {
+  border-bottom: 3px solid black;
 }
 
 .sign-up {
-  color: rgb(89, 89, 89);
-  font-weight: normal;
-}
-
-/* Outer flex container */
-.main-flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 110vh;
-  flex-wrap: wrap;
-  background-image: url(image5.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0 0 0% 40%;
-  flex-wrap: nowrap;
-  /* background-position: 75% 50%; */
-}
-
-/* Inner flex container */
-.text-flex-container {
-  display: flex;
-  flex-direction: column;
-}
-.text-flex-container p {
-  margin-top: 3rem;
-  /* color:rgb(183, 8, 23); */
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.cursor {
-  font-weight: normal;
-}
-/* 
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-} */
-
-.cl {
-  font-family: Caprasimo;
-  font-size: 8rem;
-}
-
-.lynx {
-  color: rgb(255, 115, 0);
-  font-weight: bold;
-}
-
-.email-form {
-  margin-top: 1rem;
-  display: flex;
-  /* Stack the input and button vertically */
-  align-items: center; /* Center the items horizontally */
-  /* Add some space between the text and the form */
-}
-
-.email-input {
-  font-size: 1.6rem;
-  padding: 1rem 0rem;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid rgb(0, 0, 204, 0.787);
-  width: 20vw;
-  text-align: left;
-  margin-right: 1rem;
-  background-color: transparent;
-}
-
-.submit-btn {
-  font-size: 1.6rem;
-  padding: 1rem 2rem;
-  background-color: transparent;
-  color: rgb(0, 0, 204, 0.787);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border: 2px solid rgb(0, 0, 204, 0.787);
-}
-
-.submit-btn:hover {
-  background-color: rgb(0, 0, 204, 0.787);
+  background-color: #076ae1;
+  border-radius: 7px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
   color: white;
 }
 
-/* part two */
-
-.flex-container.two {
-  flex-direction: column;
-  /* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */
-  align-content: center;
-  gap: 5rem;
+html body section.container button.sign-up {
+    scale: 1.5;
 }
 
-.browser {
-  width: 90%;
-  /* margin-top: -20rem; */
-}
-
-.flex-container.two h1 {
-  margin-top: 10rem;
-  text-align: center;
-  width: 50vw;
-  color: white;
-  font-size: 3rem;
+.sign-up:hover {
+  background-color: black;
 }
 
 .container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.caption {
-  width: 15%;
-  display: flex;
-  align-content: space-around;
   flex-direction: column;
-  justify-content: center;
-  gap: 30rem;
-  font-size: 2.3rem;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 15rem;
 }
-.pop-up {opacity: 0;}
 
-.caption p {
-  color: white;
-  font-weight: bold;
-  font-size: 2rem;
-  background-color: rgb(0, 0, 204, 0.787);
-  border-radius: 1.5rem 1.5rem 0 1.5rem;
-  padding: 10px 10px 10px 10px;
+.big-text {
+  font-size: 3rem;
+  font-weight: 600;
   text-align: center;
 }
 
-div.caption:nth-child(3) > p {
-  border-radius: 1.5rem 1.5rem 1.5rem 0;
+.phone-UI {
+  width: 40%;
+  max-width: 650px;
+  margin-left: 4vw;
 }
 
-.caption:nth-child(1) {
-  margin-right: -15rem;
-  margin-left: 5rem;
-}
-div.caption:nth-child(3) {
-  margin-left: -15rem;
-  margin-right: 5rem;
+.small-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -3rem;
 }
 
-/* footer */
 
-.footer {
+/* Container two */
+
+.container-two {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 2rem 5%; /* Add padding for spacing */
-  background-color: #333; /* Dark background for contrast */
-  color: #fff; /* White text color */
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 15rem;
+
 }
 
-.footer-link,
-.social-link {
-  margin: 0 1rem; /* Space out the links */
-  text-decoration: none; /* Remove underline */
-  color: #fff; /* White link color */
-  transition: color 0.3s; /* Smooth color transition for hover effect */
+
+.text {
+  padding: 1rem;
 }
 
-.footer-link:hover,
-.social-link:hover {
-  color: #ddd; /* Lighten the link color on hover */
+.two {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
 }
 
-/* Mobile styles */
-@media (max-width: 1500px) {
-  /* Adjust the breakpoint as needed */
+.info {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.box {
+  width: 80%;
+  max-width: 1000px;
+  border: 1px solid black;
+  border-radius: 2rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
 
-  html {
-    font-size: 50%; /* Adjust font size for mobile */
+.b {
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flex;          /* Add this */
+  flex-wrap: wrap;        /* Add this */
+  justify-content: center; /* Add this */
+  gap: 1rem;         
+}
+
+.gc {
+  /* background-color: #076ae1; */
+  display: inline-block;  /* Add this */
+  padding: 1.5rem 2.5rem;
+  border: 1px solid #076ae1;
+  border-radius: 3rem;
+  font-weight: 600;
+  color: #076ae1;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.gc:hover {
+  background-color: #076ae1;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
   }
 
-  header {
-    z-index: 11;
+  .container {
+    margin-top: 10rem;
   }
 
-  .text-flex-container {
-    margin-bottom: 0;
-    margin-left: 8rem;
+  .phone-UI {
+    width: 80%;
+    margin-left: 0;
+  }
+
+  .nav a{
+    width: 100%;
+  }
+
+  .survey {
     align-self: center;
   }
 
-  .phone-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .phone {
-    width: 65%;
-    rotate: -15deg;
-    margin: 8rem 1rem 7rem 1rem;
-  }
-  .phone:nth-child(2) {
-    display: none; /* Remove margin for the second phone */
-  }
-
-  .flex-container.two {
-    position: relative;
-    z-index: 10;
-    /* box-shadow: 0px -25px 10px 1px rgba(249, 249, 249, 0.376); */
-    justify-content: start;
-  }
-
-  .flex-container.two h1,
-  .flex-container.two p {
-    font-size: 2rem;
-    width: 80vw;
-  }
-
-  .flex-container.two h1 {
-    margin-top: 15rem;
-  }
-
-  .main-flex-container {
-    height: auto;
-    margin-top: 7rem;
-    flex-wrap: wrap;
-    gap: 5rem;
-  }
+  .nav {
+    margin-right: 1rem;
+    gap: 1rem;
 }
+    .survey, .sign-up {
+      font-size: 12px;
+      padding: 0.5rem 1rem;
+    }
 
-@media (max-width: 1250px) {
-  /* Adjust the breakpoint as needed */
+    .gc {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+    }
 
-  html {
-    font-size: 50%; /* Adjust font size for mobile */
-  }
+    .big-text {
+      margin: 0 10px 0 10px;
+    }
 
-  .main-flex-container {
-    justify-content: center;
-  }
-
-  header {
-    z-index: 11;
-  }
-
-  .main-flex-container {
-    height: 135vh;
-    align-items: center;
-  }
-
-  .text {
-    text-align: center;
-  }
-
-  .text-flex-container {
-    margin-top: 20vh;
-    margin-bottom: 1vh;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
-  }
-
-  .text-flex-container,
-  .image-group {
-    width: 100%; /* Take full width */
-  }
-
-  .phone-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    height: 70%;
-  }
-
-  .phone {
-    position: relative;
-    width: 50%;
-    rotate: -15deg;
-    z-index: 1;
-    overflow: hidden;
-  }
-  .phone:nth-child(2) {
-    display: none; /* Remove margin for the second phone */
-  }
-
-  .flex-container.two {
-    position: relative;
-    z-index: 10;
-    /* box-shadow: 0px -25px 10px 1px rgba(249, 249, 249, 0.376); */
-    justify-content: start;
-  }
-
-  .flex-container.two h1,
-  .flex-container.two p {
-    font-size: 2rem;
-    width: 80vw;
-  }
-
-  .flex-container.two h1 {
-    margin-top: 15rem;
-  }
-
-  .browser {
-    width: 700px;
-    overflow: hidden;
-    margin-right: 90%;
-  }
-  .email-input {
-    width: 60vw;
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 400px) {
-  .main-flex-container {
-    height: 115vh;
-  }
-  .logo {
-    font-weight: bolder;
-    letter-spacing: 0;
-    margin-left: 1rem;
-    margin-right: 2rem;
-  }
-  .buttons {
-    height: 80%;
-    gap: 0rem;
-    margin-right: 0;
-  }
-  .text {
-    font-size: 5rem;
-    margin-left: 0;
-  }
-  .phone {
-    width: 80%;
-  }
-
-  .browser {
-    width: 700px;
-    overflow: hidden;
-    margin-right: 90%;
-  }
 }

@@ -1,76 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <title>courselynx</title>
-    <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-      <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-</head>
-
-<body>
-    <header>
-        <div class="logo"><b>course<span class="lynx">lynx</span></b></div>
-        <div class="buttons">
-            <form class="bc" action="https://forms.gle/DpYX72az6pb1xcv48">
-                <button class="btn" type="submit">Survey 1</button>
-             </form>
-             <form class="bc" action="https://forms.gle/8kXPSNtg1EjJQzPA6">
-                <button class="btn" type="submit">Survey 2</button>
-             </form>
-        </div>
-    </header>
-    <section class="main-flex-container">
-        <div class="text-flex-container">
-            <div class="text">course<span class="lynx">lynx</span> will help you <br> <span class="typing"></span><span class="cursor">|</span></div>
-            <div class="animate__animated animate__backInLeft">
-                <p class="sign-up">Sign up to receive updates and access to exclusive giveaways!</p>
-                <form class="email-form ">
-                    <input type="email" placeholder="Enter your email" class="email-input">
-                    <button type="submit" class="submit-btn">Subscribe</button>
-                </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css')}}">
+        <title>courselynx</title>
+    </head>
+    <nav>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="lynx logo" class="logo">
+        <ul class="nav">
+            <li class="survey">
+                <a href="https://forms.gle/TT9MVCkCsLxCce6G9">Survey 1</a>
+            </li>
+            <li class="survey">
+                <a href="https://forms.gle/mhX2CCu5K9aZ7MGx9">Survey 2</a>
+            </li>
+            <li class="sign-up">
+                <a href="#">Sign Up</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="container">
+        <h1 class="big-text">
+            <em>Every course deserves a group chat.</em>
+        </h1>
+        <img src="{{ url_for('static', filename='images/phone-UI.png') }}" alt="ui" class="phone-UI">
+        <button class="sign-up">Sign Up</button>
+        <h2 class="small-text">Sign up to be notified when we launch.</h2>
+    </section>
+    <section class="container-two">
+        <div class="box">
+            <div class="text">
+                <h1 class="big-text two">Easily find your group chat</h1>
+                <p class="info">Just tell us what classes your taking, we'll take care of getting everyone in the same place</p>
             </div>
-        </div>                      
-        <div class="image-group text animate__animated animate__backInRight">
-            <div class="phone-container"><img src="{{ url_for('static', filename='images/PHONE-DEMO-1.png') }}" alt="UI" class="phone"></div>
-            <img src="{{ url_for('static', filename='images/PHONE-DEMO-1.png') }}" alt="UI" class="phone">
+            <div class="b">
+                <span class="gc">MAC2311 🧮</span>
+                <span class="gc">PHY2048</span>
+                <span class="gc">MAC2311</span>
+                <span class="gc">ECO2023</span>
+                <span class="gc">STA2023 📊</span>
+                <span class="gc">CHM2045</span>
+                <span class="gc">CHM2210 🧬</span>
+                <span class="gc">ACG2021 💰</span>
+                <span class="gc">BCH4024 👩‍🔬</span>   
+            </div>
         </div>
     </section>
-    
-        <div class="container">
-            <div class="caption">
-                <p class="pop-up">Advanced filter/search</p>
-                <p class="pop-up">Discussion boards for each course</p>
-            </div>
-            <section class="flex-container two">
-                <h1>Our mission is to virtually connect students in a way that drives collaboration and enhances the digital side of the college experience.</h4>
-                <img src="{{ url_for('static', filename='images/mac-frame.png') }}" alt="UI" class="browser">
-            </section>
-            <div class="caption">
-                <p class="pop-up">Easy to find groupchats</p>
-                <p class="pop-up">Earn awards and cred for your acheivments</p>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="footer-left">
-                <a href="#" class="footer-link">courselynx</a>
-                <a href="#" class="footer-link">About Us</a>
-                <a href="#" class="footer-link">Contact</a>
-            </div>
-            <div class="footer-right">
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Instagram</a>
-                <!-- Add more social links as needed -->
-            </div>
-        </footer>
-
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-
 </html>
