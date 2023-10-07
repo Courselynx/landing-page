@@ -6,10 +6,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
   font-family: "Heebo", sans-serif;
   background-color: white;
-  font-size: 16px; /* 1rem */
 }
 
 nav {
@@ -88,10 +91,11 @@ html body section.container button.sign-up {
 }
 
 .small-text {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 300;
     text-align: center;
     margin-top: -3rem;
+    color: gray;
 }
 
 
@@ -162,7 +166,9 @@ html body section.container button.sign-up {
 
 @media (max-width: 768px) {
 
-  
+    html {
+      font-size: 10px;
+    }
     .container {
       margin-top: 10rem;
     }
@@ -189,17 +195,17 @@ html body section.container button.sign-up {
     }  
    .sign-up {
       padding: 0.5rem 1rem;
-      width: 100%;
       align-items: center;
     }
 
     .gc {
       padding: 1rem 2rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
     .big-text {
-      margin: 0 10px 0 10px;
+      margin: 0 5px 0 5px;
+      font-size: 2rem;
     }
 
 }
