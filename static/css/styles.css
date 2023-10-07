@@ -161,34 +161,36 @@ html body section.container button.sign-up {
 
 
 @media (max-width: 768px) {
-  body {
-    font-size: 12px;
-  }
 
-  .container {
-    margin-top: 10rem;
-  }
-
-  .phone-UI {
-    width: 80%;
-    margin-left: 0;
-  }
-
-  .nav a{
-    width: 100%;
-  }
-
-  .survey {
-    align-self: center;
-  }
-
-  .nav {
-    margin-right: 1rem;
-    gap: 1rem;
-}
-    .survey, .sign-up {
-      font-size: 12px;
+  
+    .container {
+      margin-top: 10rem;
+    }
+  
+    .phone-UI {
+      width: 80%;
+      margin-left: 0;
+    }
+  
+    .nav a{
+      width: 100%;
+    }
+  
+    .survey {
+      align-self: center;
+      padding: 0.5rem 0;
+    }
+  
+    .nav {
+      margin-right: 1rem;
+      gap: 1rem;
+      font-size: 1rem;
+      white-space: nowrap;
+    }  
+   .sign-up {
       padding: 0.5rem 1rem;
+      width: 100%;
+      align-items: center;
     }
 
     .gc {
