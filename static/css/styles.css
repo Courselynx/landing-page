@@ -197,6 +197,10 @@ html body section.container button.sign-up {
     .container {
       margin-top: 4rem;
     }
+
+    .container-two {
+      width: 100%;
+    }
   
     .phone-UI {
       width: 80%;
@@ -226,7 +230,7 @@ html body section.container button.sign-up {
 
     .gc {
       padding: 0.5rem 1rem;
-      font-size: 1rem;
+      font-size: 0.75rem;
     }
 
     .big-text {
@@ -256,7 +260,7 @@ html body section.container button.sign-up {
       width: 85%;
     }
     .small-text {
-      font-size: 1rem;
+      font-size: 0.5rem;
     }
 
 }
