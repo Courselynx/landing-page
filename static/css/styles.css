@@ -194,10 +194,6 @@ html body section.container button.sign-up {
 
 
 @media (max-width: 768px) {
-
-    html {
-      font-size: 10px;
-    }
     .container {
       margin-top: 4rem;
     }
