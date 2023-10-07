@@ -181,15 +181,17 @@ html body section.container button.sign-up {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 19rem;
 }
 
 .phoneputer {
   width: 40%;
+  opacity: 0;
 }
 
 .dbs {
   width: 30%;
+  opacity: 0;
 }
 
 
