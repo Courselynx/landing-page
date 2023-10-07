@@ -214,22 +214,23 @@ html body section.container button.sign-up {
     .survey {
       align-self: center;
       padding: 0.5rem 0;
+      font-size: 1.5rem;
     }
   
     .nav {
       margin-right: 1rem;
       gap: 1rem;
-      font-size: 2.5rem;
       white-space: nowrap;
     }  
    .sign-up {
       padding: 0.5rem 1rem;
       align-items: center;
+      font-size: 1.5rem;
     }
 
     .gc {
       padding: 0.5rem 1rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
     .big-text {
