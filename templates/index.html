@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <title>courselynx</title>
     </head>
     <nav>
@@ -21,31 +22,43 @@
             </li>
         </ul>
     </nav>
-    <section class="container">
-        <h1 class="big-text">
-            <em>Every course deserves a group chat.</em>
-        </h1>
-        <img src="{{ url_for('static', filename='images/phone-UI.png') }}" alt="ui" class="phone-UI">
-        <button class="sign-up">Sign Up</button>
-        <h2 class="small-text">Sign up to be notified when we launch.</h2>
-    </section>
-    <section class="container-two">
-        <div class="box">
-            <div class="text">
-                <h1 class="big-text two">Easily find your group chat</h1>
-                <p class="info">Just tell us what classes your taking, we'll take care of getting everyone in the same place</p>
+    <div class="page">
+        <section class="container">
+            <h1 class="big-text animate__animated animate__fadeInDown">
+                <em>Every course deserves <br> a group chat.</em>
+            </h1>
+            <img src="{{ url_for('static', filename='images/phone-UI.png') }}" alt="ui" class="phone-UI animate__animated animate__fadeInUp">
+            <button class="sign-up">Sign Up</button>
+            <h2 class="small-text">Sign up to be notified when we launch.</h2>
+        </section>
+        <section class="container-two">
+            <div class="box">
+                <div class="text">
+                    <h1 class="big-text two">Easily find your group chat</h1>
+                    <p class="info">Just tell us what classes your taking, we'll take care of getting everyone in the same place</p>
+                </div>
+                <div class="b">
+                    <span class="gc">MAC2311 🧮</span>
+                    <span class="gc">PHY2048 😳</span>
+                    <span class="gc">MAC2311 ♾️</span>
+                    <span class="gc">ECO2023 📈</span>
+                    <span class="gc">STA2023 📊</span>
+                    <span class="gc">CHM2045 🧪</span>
+                    <span class="gc">CHM2210 🧬</span>
+                    <span class="gc">ACG2021 💰</span>
+                    <span class="gc">BCH4024 👩‍🔬</span>
+                    <span class="gc">COP3502 💻</span>
+                    <span class="gc">+ more</span>
+                </div>
             </div>
-            <div class="b">
-                <span class="gc">MAC2311 🧮</span>
-                <span class="gc">PHY2048</span>
-                <span class="gc">MAC2311</span>
-                <span class="gc">ECO2023</span>
-                <span class="gc">STA2023 📊</span>
-                <span class="gc">CHM2045</span>
-                <span class="gc">CHM2210 🧬</span>
-                <span class="gc">ACG2021 💰</span>
-                <span class="gc">BCH4024 👩‍🔬</span>   
+        </section>
+        <section class="container-three">
+            <div class="text dbs">
+                <h1 class="big-text two">Discussion Boards</h1>
+                <p class="info">Disucssion boards to keep everything nice and organized. No more searching for that useful thing someone said last week</p>
             </div>
-        </div>
-    </section>
+            <img class="phoneputer" src="{{ url_for('static', filename='images/phone-mac.png') }}" alt="phone and computer displaying user interface">
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </html>

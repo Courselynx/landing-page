@@ -7,12 +7,19 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 body {
   font-family: "Heebo", sans-serif;
   background-color: white;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 nav {
@@ -34,6 +41,7 @@ nav {
   color: black;
   font-weight: 600;
   text-align: center;
+  font-size: 0.5rem;
 }
 
 .sign-up > a:nth-child(1) {
@@ -57,13 +65,14 @@ nav {
 .sign-up {
   background-color: #076ae1;
   border-radius: 7px;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
   font-weight: 600;
   color: white;
 }
 
 html body section.container button.sign-up {
-    scale: 1.5;
+    font-size: 1rem;
+    border: none;
 }
 
 .sign-up:hover {
@@ -75,23 +84,23 @@ html body section.container button.sign-up {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-  margin-top: 15rem;
+  margin-top: 4rem;
 }
 
 .big-text {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
 }
 
 .phone-UI {
-  width: 40%;
+  width: 65%;
   max-width: 650px;
   margin-left: 4vw;
 }
 
 .small-text {
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: 300;
     text-align: center;
     margin-top: -3rem;
@@ -106,7 +115,8 @@ html body section.container button.sign-up {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  margin-top: 15rem;
+  margin-top: 10rem;
+  width: 75%;
 
 }
 
@@ -116,14 +126,16 @@ html body section.container button.sign-up {
 }
 
 .two {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: center;
 }
 
 .info {
+  margin-top: 1rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  color: rgb(94, 94, 94);
 }
 .box {
   width: 80%;
@@ -135,6 +147,7 @@ html body section.container button.sign-up {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  opacity: 0;
 }
 
 .b {
@@ -149,18 +162,34 @@ html body section.container button.sign-up {
 .gc {
   /* background-color: #076ae1; */
   display: inline-block;  /* Add this */
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 1.5rem;
   border: 1px solid #076ae1;
   border-radius: 3rem;
   font-weight: 600;
   color: #076ae1;
   margin-bottom: 0;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .gc:hover {
   background-color: #076ae1;
   color: white;
+}
+
+.container-three {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.phoneputer {
+  width: 40%;
+}
+
+.dbs {
+  width: 30%;
 }
 
 
@@ -170,7 +199,7 @@ html body section.container button.sign-up {
       font-size: 10px;
     }
     .container {
-      margin-top: 10rem;
+      margin-top: 4rem;
     }
   
     .phone-UI {
@@ -199,17 +228,35 @@ html body section.container button.sign-up {
     }
 
     .gc {
-      padding: 1rem 2rem;
-      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.5rem;
     }
 
     .big-text {
       margin: 0 5px 0 5px;
       font-size: 3rem;
     }
+    .box {
+      padding: 1rem;
+    }
+    .b {
+      gap: 0.5rem;
+    }
 
     .two {
       margin-bottom: 1rem;
+    }
+
+    .container-three {
+      flex-direction: column;
+      text-align: center;
+    }
+    .dbs {
+      width: 90%;
+    }
+
+    .phoneputer {
+      width: 85%;
     }
 
 }
