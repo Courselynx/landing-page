@@ -194,6 +194,10 @@ html body section.container button.sign-up {
 
 
 @media (max-width: 768px) {
+
+    html {
+      font-size: 10px;
+    }
     .container {
       margin-top: 4rem;
     }
@@ -226,7 +230,7 @@ html body section.container button.sign-up {
       font-size: 1rem;
     }
    .sign-up {
-      padding: 0.25rem 0.5rem;
+      padding: 5px 10px;
       align-items: center;
     }
 
