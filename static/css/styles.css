@@ -219,7 +219,7 @@ html body section.container button.sign-up {
     .nav {
       margin-right: 1rem;
       gap: 1rem;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       white-space: nowrap;
     }  
    .sign-up {
@@ -229,7 +229,7 @@ html body section.container button.sign-up {
 
     .gc {
       padding: 0.5rem 1rem;
-      font-size: 0.5rem;
+      font-size: 1.5rem;
     }
 
     .big-text {
@@ -257,6 +257,9 @@ html body section.container button.sign-up {
 
     .phoneputer {
       width: 85%;
+    }
+    .small-text {
+      font-size: 1.5rem;
     }
 
 }
