@@ -231,10 +231,10 @@ html body section.container button.sign-up {
 
     .big-text {
       margin: 0 5px 0 5px;
-      font-size: 3rem;
+      font-size: 1.5rem;
     }
     .box {
-      padding: 1rem;
+      padding: 0.5rem;
     }
     .b {
       gap: 0.5rem;
@@ -256,7 +256,7 @@ html body section.container button.sign-up {
       width: 85%;
     }
     .small-text {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
 }
