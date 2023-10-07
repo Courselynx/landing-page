@@ -224,6 +224,7 @@ html body section.container button.sign-up {
       margin-right: 1rem;
       gap: 1rem;
       white-space: nowrap;
+
     }
     
     .nav a{
@@ -235,7 +236,7 @@ html body section.container button.sign-up {
     }
 
     .gc {
-      padding: 0.5rem 1rem;
+      padding: 5px 10px;
       font-size: 0.75rem;
     }
 
