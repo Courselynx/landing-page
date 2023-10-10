@@ -181,7 +181,7 @@ html body section.container button.sign-up {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 19rem;
+  margin-bottom: 10rem;
 }
 
 .phoneputer {
@@ -192,6 +192,24 @@ html body section.container button.sign-up {
 .dbs {
   width: 30%;
   opacity: 0;
+}
+
+.gigf {
+  width: 30%;
+  border-radius: 2rem;
+  opacity: 0;
+}
+
+.chat-group {
+  width: 50%;
+  max-width: 600px;
+}
+
+.four {
+  gap: 3rem;
+}
+.blue {
+  color: #076ae1;
 }
 
 
@@ -270,6 +288,17 @@ html body section.container button.sign-up {
     }
     .small-text {
       font-size: 1rem;
+    }
+
+    .gigf {
+      width: 50%;
+      border-radius: 2rem;
+      opacity: 0;
+    }
+    
+    .chat-group {
+      width: 80%;
+      max-width: 600px;
     }
 
 }

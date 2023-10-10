@@ -2,6 +2,8 @@
 const box = document.querySelector('.box');
 const dbs = document.querySelector('.dbs');
 const photo = document.querySelector('.phoneputer')
+const chat = document.querySelector('.chat-group')
+const gif = document.querySelector('.gigf')
 
 // Listen for the scroll event on the window
 window.addEventListener('scroll', () => {
@@ -15,4 +17,9 @@ window.addEventListener('scroll', () => {
         dbs.classList.add('animate__animated', 'animate__fadeInLeft');
         photo.classList.add('animate__animated', 'animate__fadeInRight');
     }
+    if (window.scrollY >= window.innerHeight/0.6){
+        chat.classList.add('animate__animated', 'animate__fadeInLeft');
+        gif.classList.add('animate__animated', 'animate__fadeInRight');
+    }
+
 });
