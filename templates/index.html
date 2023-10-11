@@ -66,8 +66,23 @@
             </div>
             <img src="{{ url_for('static', filename='images/chat-gif.gif') }}" alt="gif of messages" class="gigf">
         </section>
+        <section class="container-three">
+            <div class="text-container">
+                <h1 class="big-text two profile">Flex your accomplishments</h1>
+                <p class="info">You work hard in school, a little recognition would be nice. Earn awards, earn tips 💸 by helping your peers, and earn <span>cred</span> by being active </p>
+            </div>
+            <img src="{{ url_for('static', filename='images/Profile.png') }}" alt="" class="profile-pic">
+        </section>
+        <section class="container-two upsign">
+            <div class="sign-text">
+                <h1 class="big-text two notified">Sign up to be notified when we launch.</h1>
+                <form action="" class="form">
+                    <input type="text" placeholder="Enter your email" class="email">
+                    <button class="sign-up" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
     </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </html>
 
-```
