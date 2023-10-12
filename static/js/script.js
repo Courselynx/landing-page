@@ -26,7 +26,10 @@ window.addEventListener("scroll", () => {
   if (window.scrollY >= window.innerHeight / 0.4) {
     profile.classList.add("animate__animated", "animate__fadeInUp");
   }
-  if (window.scrollY >= window.innerHeight / 0.8) {
-    joinBox.classList.add("animate__animated", "animate__fadeInUp");
-  }
 });
+
+document.querySelector('.nav-sign').addEventListener('click', function() {
+  document.querySelector('.email').scrollIntoView({ behavior: 'smooth' });
+  console.log('clicked');
+});
+

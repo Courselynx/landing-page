@@ -250,7 +250,7 @@ html body section.container button.sign-up {
 }
 
 .email {
-  border: 1px solid #076ae1;
+  border: 1px solid black;
   padding: 15px 25px;
   width: 60%;
   max-width: 350px;
@@ -259,6 +259,11 @@ html body section.container button.sign-up {
 
 .notified {
   width: 80%;
+}
+
+.profile-pic {
+  width: 40%;
+  /* max-width: 300px; */
 }
 
 
