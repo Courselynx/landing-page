@@ -1,35 +1,87 @@
 // Get the .box element
+
+
+// Listen for the scroll event on the window
+// window.addEventListener("scroll", () => {
+//   console.log("y", window.scrollY);
+//   if (window.scrollY >= window.innerHeight / 1.6) {
+//     // Add the animate.css class to trigger the animation
+//     box.classList.add("animate__animated", "animate__fadeInUp");
+//   }
+//   if (window.scrollY >= window.innerHeight / 0.8) {
+//     console.log("made it");
+//     dbs.classList.add("animate__animated", "animate__fadeInLeft");
+//     photo.classList.add("animate__animated", "animate__fadeInRight");
+//   }
+//   if (window.scrollY >= window.innerHeight / 0.6) {
+//     chat.classList.add("animate__animated", "animate__fadeInLeft");
+//     gif.classList.add("animate__animated", "animate__fadeInRight");
+//   }
+//   if (window.scrollY >= window.innerHeight / 0.4) {
+//     profile.classList.add("animate__animated", "animate__fadeInUp");
+//   }
+// });
+
+
 const box = document.querySelector(".box");
 const dbs = document.querySelector(".dbs");
 const photo = document.querySelector(".phoneputer");
 const chat = document.querySelector(".chat-group");
 const gif = document.querySelector(".gigf");
-const profile = document.querySelector(".profile");
-const joinBox = document.querySelector(".join");
+const profile = document.querySelector(".profile-pic");
+const profileText = document.querySelector(".prof-text");
 
-// Listen for the scroll event on the window
-window.addEventListener("scroll", () => {
-  console.log("y", window.scrollY);
-  if (window.scrollY >= window.innerHeight / 1.6) {
-    // Add the animate.css class to trigger the animation
-    box.classList.add("animate__animated", "animate__fadeInUp");
-  }
-  if (window.scrollY >= window.innerHeight / 0.8) {
-    console.log("made it");
-    dbs.classList.add("animate__animated", "animate__fadeInLeft");
-    photo.classList.add("animate__animated", "animate__fadeInRight");
-  }
-  if (window.scrollY >= window.innerHeight / 0.6) {
-    chat.classList.add("animate__animated", "animate__fadeInLeft");
-    gif.classList.add("animate__animated", "animate__fadeInRight");
-  }
-  if (window.scrollY >= window.innerHeight / 0.4) {
-    profile.classList.add("animate__animated", "animate__fadeInUp");
-  }
+
+// Function to handle the animations
+function handleAnimation(entries, observer) {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          // console.log(here);
+          const target = entry.target;
+          if (target.classList.contains('box')) {
+            target.classList.add('animate__animated', 'animate__fadeInUp');
+
+            const gcElements = target.querySelectorAll('.gc');
+            gcElements.forEach((gc, index) => {
+              setTimeout(() => {
+                  gc.classList.add('animate__animated', 'animate__fadeInDown');
+              }, index * 150); // 100ms delay between each .gc animation
+          });
+
+          } else if (target.classList.contains('dbs') || target.classList.contains('phoneputer')) {
+              target.classList.add('animate__animated', 'animate__fadeInLeft');
+          } else if (target.classList.contains('chat-group') || target.classList.contains('gigf')) {
+              target.classList.add('animate__animated', 'animate__fadeInRight');
+          } else if (target.classList.contains('profile-pic')) {
+              target.classList.add('animate__animated', 'animate__fadeInLeft');
+          } else if (target.classList.contains('prof-text')) {
+              target.classList.add('animate__animated', 'animate__fadeInRight');
+          }
+
+          // Stop observing the current target
+          observer.unobserve(target);
+      }
+  });
+}
+
+// Create a new Intersection Observer instance
+const observer = new IntersectionObserver(handleAnimation, {
+  root: null, // use the viewport
+  rootMargin: '0px',
+  threshold: 0.7 // trigger when at least 10% of the element is visible
 });
 
-document.querySelector('.nav-sign').addEventListener('click', function() {
-  document.querySelector('.email').scrollIntoView({ behavior: 'smooth' });
-  console.log('clicked');
+// Start observing the elements
+const elements = [box, dbs, photo, chat, gif, profile, profileText];
+elements.forEach(el => observer.observe(el));
+
+
+buttons = document.querySelectorAll(".to-bottom");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelector('.email').scrollIntoView({ behavior: 'smooth' });
+  });
 });
+
 

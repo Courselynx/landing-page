@@ -17,7 +17,7 @@
             <li class="survey">
                 <a href="https://forms.gle/mhX2CCu5K9aZ7MGx9">Survey 2</a>
             </li>
-            <button class="sign-up nav-sign">Sign Up</button>
+            <button class="sign-up nav-sign to-bottom">Sign Up</button>
         </ul>
     </nav>
     <div class="page">
@@ -26,8 +26,8 @@
                 <em>Every course deserves <br> a group chat.</em>
             </h1>
             <img src="{{ url_for('static', filename='images/phone-UI.png') }}" alt="ui" class="phone-UI animate__animated animate__fadeInUp">
-            <button class="sign-up">Sign Up</button>
-            <h2 class="small-text">Sign up to be notified when we launch.</h2>
+            <button class="disappear sign-up to-bottom animate__animated animate__fadeIn">Sign Up</button>
+            <h2 class="disappear small-text animate__animated animate__fadeIn">Sign up to be notified when we launch.</h2>
         </section>
         <section class="container-two">
             <div class="box">
@@ -36,40 +36,40 @@
                     <p class="info">Just tell us what classes your taking, we'll take care of getting everyone in the same place</p>
                 </div>
                 <div class="b">
-                    <span class="gc">MAC2311 🧮</span>
-                    <span class="gc">PHY2048 😳</span>
-                    <span class="gc">MAC2311 ♾️</span>
-                    <span class="gc">ECO2023 📈</span>
-                    <span class="gc">STA2023 📊</span>
-                    <span class="gc">CHM2045 🧪</span>
-                    <span class="gc">CHM2210 🧬</span>
-                    <span class="gc">ACG2021 💰</span>
-                    <span class="gc">BCH4024 👩‍🔬</span>
-                    <span class="gc">COP3502 💻</span>
-                    <span class="gc">+ more</span>
+                    <span class="gc disappear">MAC2311 🧮</span>
+                    <span class="gc disappear">PHY2048 😳</span>
+                    <span class="gc disappear">MAC2311 ♾️</span>
+                    <span class="gc disappear">ECO2023 📈</span>
+                    <span class="gc disappear">STA2023 📊</span>
+                    <span class="gc disappear">CHM2045 🧪</span>
+                    <span class="gc disappear">CHM2210 🧬</span>
+                    <span class="gc disappear">ACG2021 💰</span>
+                    <span class="gc disappear">BCH4024 👩‍🔬</span>
+                    <span class="gc disappear">COP3502 💻</span>
+                    <span class="gc disappear">+ more</span>
                 </div>
             </div>
         </section>
-        <section class="container-three">
+        <section class="container-three flip">
+            <img class="phoneputer" src="{{ url_for('static', filename='images/phone-mac.png') }}" alt="phone and computer displaying user interface">
             <div class="text dbs">
                 <h1 class="big-text two">Discussion Boards</h1>
                 <p class="info">Disucssion boards to keep everything nice and organized. No more searching for that useful thing someone said last week</p>
             </div>
-            <img class="phoneputer" src="{{ url_for('static', filename='images/phone-mac.png') }}" alt="phone and computer displaying user interface">
         </section>
         <section class="container-three four">
             <div class="text chat-group">
-                <h1 class="big-text two">Group chats</h1>
+                <h1 class="big-text two disappear">Group chats</h1>
                 <p class="info">A group chat with 100+ people can be pure anarchy. <span class="blue">courselynx</span> makes this chaos much more naviagable by separating discussions and chats. And to aleviate some more pain, we have advanced searches/filters, likes and dislikes, moderation, muting, and much more...</p>
             </div>
             <img src="{{ url_for('static', filename='images/chat-gif.gif') }}" alt="gif of messages" class="gigf">
         </section>
-        <section class="container-three">
-            <div class="text-container">
+        <section class="container-three flip prof">
+            <img src="{{ url_for('static', filename='images/Profile.png') }}" alt="" class="profile-pic disappear">
+            <div class="text-container prof-text disappear">
                 <h1 class="big-text two profile">Flex your accomplishments</h1>
-                <p class="info">You work hard in school, a little recognition would be nice. Earn awards, earn tips 💸 by helping your peers, and earn <span>cred</span> by being active </p>
+                <p class="info">You work hard in school, a little recognition would be nice. Earn awards and tips 💸 by helping your peers and earn <span>cred</span> by being active </p>
             </div>
-            <img src="{{ url_for('static', filename='images/Profile.png') }}" alt="" class="profile-pic">
         </section>
         <section class="container-two upsign">
             <div class="sign-text">
