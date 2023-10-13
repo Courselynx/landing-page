@@ -270,6 +270,14 @@ html body section.container button.sign-up {
   opacity: 0;
 }
 
+.error {
+  position: absolute;
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
 @media (max-width: 768px) {
   html {
     font-size: 10px;

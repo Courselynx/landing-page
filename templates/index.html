@@ -73,11 +73,21 @@
         </section>
         <section class="container-two upsign">
             <div class="sign-text">
+                <div class="error">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="{{ category }}">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+
                 <h1 class="big-text two notified">Sign up to be notified when we launch.</h1>
-                <form action="" class="form">
-                    <input type="text" placeholder="Enter your email" class="email">
+                <form action="/subscribe" method="post" class="form">
+                    <input type="email" name="email" placeholder="Enter your email" class="email">
                     <button class="sign-up" type="submit">Sign Up</button>
-                </form>
+                </form>                
             </div>
         </section>
     </div>
