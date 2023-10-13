@@ -2,12 +2,15 @@ from flask import Flask, render_template, url_for, jsonify, request, redirect, f
 from flask_cors import CORS
 import csv
 import re
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app)
 
+load_dotenv()
 # This is necessary for flashing messages
-
+app.secret_key = os.getenv('APP_SECRET_KEY')
 
 @app.route('/')
 def index():
