@@ -304,6 +304,7 @@ html body section.container button.sign-up {
   .survey {
     align-self: center;
     padding: 0.5rem 0;
+    font-size: 1.5rem;
   }
 
   .nav {
