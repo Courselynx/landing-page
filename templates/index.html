@@ -86,9 +86,38 @@
 
                 <h1 class="big-text two notified">Sign up to be notified when we launch.</h1>
                 <form action="/subscribe" method="post" class="form">
-                    <input type="email" name="email" placeholder="Enter your email" class="email">
+                    <input type="email" name="email" placeholder="Enter your email" class="email" required>
+                    
+                    <select name="school" id="school-dropdown" required class="dropDown">
+                        <option value="" disabled selected>Select your school</option>
+                        <option value="UF">UF</option>
+                        <option value="FSU">FSU</option>
+                        <option value="UCF">UCF</option>
+                        <option value="SantaFe">Santa Fe</option>
+                        <option value="USF">USF</option>
+                        <option value="FAMU">FAMU</option>
+                        <option value="FIU">FIU</option>
+                        <option value="FAU">FAU</option>
+                        <option value="FGCU">FGCU</option>
+                        <option value="UNF">UNF</option>
+                        <!-- ... other schools ... -->
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <input type="text" name="other-school" id="other-school-input" placeholder="Specify your school" style="display: none;" class="dropDown">
+                    
+                    <select name="year" required class="dropDown">
+                        <option value="" disabled selected>Select your year</option>
+                        <option value="Freshman">Freshman</option>
+                        <option value="Sophomore">Sophomore</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Senior">Senior</option>
+                        <option value="Year2">Graduate</option>
+                    </select>
+                    
                     <button class="sign-up" type="submit">Sign Up</button>
-                </form>                
+                </form>
+                               
             </div>
         </section>
     </div>

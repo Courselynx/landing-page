@@ -21,16 +21,22 @@ EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 @app.route('/subscribe', methods=['POST'])
 def subscribe():
     email = request.form.get('email')
+    school = request.form.get('school')
+    other_school = request.form.get('other-school') if school == 'other' else ''
+    year = request.form.get('year')
     
+    # Validate email
     if not EMAIL_REGEX.match(email):
         flash('Invalid email format. Please enter a valid email address.', 'error')
         return redirect(url_for('index'))
 
+    # Append the data to a CSV file
     with open('output/subscribers.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([email])
+        writer.writerow([email, school, other_school, year])
     
     return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     app.run()

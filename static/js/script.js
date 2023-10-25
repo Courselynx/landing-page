@@ -85,3 +85,13 @@ buttons.forEach((button) => {
 });
 
 
+document.getElementById('school-dropdown').addEventListener('change', function() {
+  const otherSchoolInput = document.getElementById('other-school-input');
+  if (this.value === 'other') {
+      otherSchoolInput.style.display = 'block';
+      otherSchoolInput.required = true;
+  } else {
+      otherSchoolInput.style.display = 'none';
+      otherSchoolInput.required = false;
+  }
+});

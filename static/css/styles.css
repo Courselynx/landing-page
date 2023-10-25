@@ -277,6 +277,15 @@ html body section.container button.sign-up {
   margin-top: 10px;
 }
 
+.dropDown {
+  border: 1px solid black;
+  padding: 15px 25px;
+  width: 40%;
+  max-width: 350px;
+  border-radius: 2rem;
+  background-color: white;
+}
+
 
 @media (max-width: 768px) {
   html {
@@ -384,5 +393,9 @@ html body section.container button.sign-up {
   }
   .email {
     width: 90%;
+  }
+
+  .dropDown {
+    width: 70%;
   }
 }
