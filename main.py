@@ -47,7 +47,7 @@ def subscribe():
             logging.info('Content of CSV (reader): %s', list(reader))
         # Log the extracted emails
             logging.info('Extracted emails (existing_emails): %s', existing_emails)
-    ...
+
         if email in existing_emails:
             flash('This email is already subscribed.', 'error-message')
             return redirect(url_for('index'))
