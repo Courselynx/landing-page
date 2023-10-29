@@ -43,7 +43,9 @@ def subscribe():
         existing_emails = []
         with open('output/subscribers.csv', 'r', newline='') as csvfile:
             reader = csv.reader(csvfile)
+            logging.info(reader)
             existing_emails = [row[0] for row in reader]
+            logging.info(existing_emails)
 
         if email in existing_emails:
             flash('This email is already subscribed.', 'error-message')
