@@ -43,7 +43,7 @@ def subscribe():
         existing_emails = []
         with open('output/subscribers.csv', 'r', newline='') as csvfile:
             reader = csv.reader(csvfile)
-            existing_emails = [row[0] for row in reader]
+            existing_emails = [row[0] for row in reader if len(row) > 0]
             logging.info('Content of CSV (reader): %s', list(reader))
         # Log the extracted emails
             logging.info('Extracted emails (existing_emails): %s', existing_emails)
