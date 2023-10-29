@@ -18,6 +18,11 @@ def index():
 
 EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
+import csv
+from flask import Flask, request, flash, redirect, url_for
+
+# ... (other parts of your code)
+
 @app.route('/subscribe', methods=['POST'])
 def subscribe():
     email = request.form.get('email')
@@ -27,7 +32,17 @@ def subscribe():
     
     # Validate email
     if not EMAIL_REGEX.match(email):
-        flash('Invalid email format. Please enter a valid email address.', 'error')
+        flash('Invalid email format. Please enter a valid email address.', 'error-message')
+        return redirect(url_for('index'))
+
+    # Check for duplicate email
+    existing_emails = []
+    with open('output/subscribers.csv', 'r', newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        existing_emails = [row[0] for row in reader]
+    
+    if email in existing_emails:
+        flash('This email is already subscribed.', 'error-message')
         return redirect(url_for('index'))
 
     # Append the data to a CSV file
@@ -35,7 +50,9 @@ def subscribe():
         writer = csv.writer(csvfile)
         writer.writerow([email, school, other_school, year])
     
+    flash('Successfully subscribed! We will notify you when we launch.', 'success')
     return redirect(url_for('index'))
+
 
 
 if __name__ == '__main__':
