@@ -57,7 +57,7 @@ def subscribe():
             writer = csv.writer(csvfile)
             writer.writerow([email, school, other_school, year])
 
-        flash('Successfully subscribed! We will notify you when we launch.', 'success')
+        flash('Successfully subscribed!', 'success')
         return redirect(url_for('index'))
     except Exception as e:
         logging.error("Error in subscribe: %s", str(e))
