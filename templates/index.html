@@ -19,11 +19,6 @@
         {% endif %}
         {% endwith %}
     </div>
-    
-    <nav>
-        <!-- ... rest of your nav bar ... -->
-    </nav>
-    
     <nav>
         <img src="{{ url_for('static', filename='images/logo.png') }}" alt="lynx logo" class="logo">
         <ul class="nav">
@@ -31,7 +26,7 @@
                 <a  class="" href="https://forms.gle/TT9MVCkCsLxCce6G9">Survey 1</a>
             </li>
             <li class="survey">
-                <a href="https://forms.gle/mhX2CCu5K9aZ7MGx9">Survey 2</a>
+                <a href="{{url_for('contact')}}">Contact Us</a>
             </li>
             <button class="sign-up nav-sign to-bottom">Sign Up</button>
         </ul>

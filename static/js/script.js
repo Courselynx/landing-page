@@ -75,7 +75,7 @@ document.getElementById('school-dropdown').addEventListener('change', function()
 
 setTimeout(function() {
   let flashes = document.querySelectorAll('.flashes li');
-  const success = document.querySelector('.messages');
+  const success = document.querySelector('.messages1');
   for (let flash of flashes) {
       flash.style.opacity = 0;
       success.style.opacity = 0;

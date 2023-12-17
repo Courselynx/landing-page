@@ -49,8 +49,8 @@ nav {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   margin: 0 0 0 1rem;
 }
 
@@ -456,4 +456,83 @@ html body section.container button.sign-up {
   color: #721C24;
   width: 100%;
   padding: 1rem;
+}
+
+
+/* contact us page  */
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 1;
+  width: 80%;
+  max-width: 1000px;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.contact {
+  font-size: 3rem;
+}
+
+.contact-container {
+  width: 100%;
+}
+
+.contact-input {
+  width: 44%;
+  max-width: 300px;
+  padding: 12px 20px;
+  border-radius: 7px;
+  border: 1px solid #076ae1;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-body {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 20px;
+  height: 175px;
+  border-radius: 7px 7px 0px 7px;
+  border: 1px solid #076ae1;
+  font-family: "Heebo", sans-serif;
+}
+
+
+.contact-submit{
+  background-color: #076ae1;
+  border-radius: 7px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-submit:hover {
+  background-color: black;
+}
+
+.container-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-small {
+  font-size: 1.5rem;
 }
